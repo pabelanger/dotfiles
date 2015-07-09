@@ -154,9 +154,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     position top
-    status_command i3status
-    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-    font pango:DejaVu Sans Mono 10
+    status_command i3status -c ~/.i3/i3status
 }
 
 # auto-started applications on login
