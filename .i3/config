@@ -162,3 +162,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id pidgin
 
 bindsym XF86Tools exec gnome-control-center
+
+bindsym $mod+c exec "gsimplecal"
+for_window [class="Gsimplecal"] floating enable
+for_window [class="Gsimplecal"] move absolute position 1660px 850px
