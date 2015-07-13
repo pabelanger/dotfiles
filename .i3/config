@@ -162,6 +162,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id pidgin
 
 bindsym XF86Tools exec gnome-control-center
+bindsym $mod+q exec "i3lock -c 111111"
 
 bindsym $mod+c exec "gsimplecal"
 for_window [class="Gsimplecal"] floating enable
