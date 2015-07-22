@@ -1,0 +1,31 @@
+[general]
+accounts = RedHat
+maxsyncaccounts = 1
+
+[Account RedHat]
+localrepository = Local
+remoterepository = Remote
+autorefresh = 5
+quick = 10
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Mail/RedHat
+
+[Repository Remote]
+type = IMAP
+ssl = yes
+sslcacertfile = ~/.cert/RedHatISCA.crt
+remotehost = mail.corp.redhat.com
+remoteport = 993
+remoteuser = pbelange@REDHAT.COM
+keepalive = 60
+holdconnectionopen = yes
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
