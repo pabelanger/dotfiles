@@ -1,0 +1,6 @@
+# IMAP: offlineimap
+set folder = "~/Mail"
+source ~/.mutt/mailboxes
+set spoolfile = "+RedHat/INBOX"
+set record = "+RedHat/Sent\ Items"
+set postponed = "+RedHat/Drafts"
