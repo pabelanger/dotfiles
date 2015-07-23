@@ -5,8 +5,6 @@ maxsyncaccounts = 1
 [Account RedHat]
 localrepository = Local
 remoterepository = Remote
-autorefresh = 5
-quick = 10
 
 [Repository Local]
 type = Maildir
