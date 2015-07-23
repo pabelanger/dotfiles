@@ -5,6 +5,11 @@ set spoolfile = "+RedHat/INBOX"
 set record = "+RedHat/Sent\ Items"
 set postponed = "+RedHat/Drafts"
 
+# Info
+set realname = "Paul Belanger"
+set from = "pabelanger@redhat.com"
+set sendmail = "/usr/bin/msmtp -a redhat
+
 # Sorting
 set sort = threads
 set sort_aux = reverse-date-received
