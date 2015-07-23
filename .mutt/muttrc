@@ -15,3 +15,5 @@ set sort = threads
 set sort_aux = reverse-date-received
 
 macro index,pager A ":set confirmappend=no delete=yes\n<save-message>=RedHat/Archives.2015<enter><sync-mailbox>:set confirmappend=yes delete=ask-yes\n"  "Archive Message"
+
+source ~/.mutt/colors
