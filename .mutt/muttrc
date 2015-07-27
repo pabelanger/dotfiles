@@ -14,6 +14,9 @@ set sendmail = "/usr/bin/msmtp -a redhat
 set sort = threads
 set sort_aux = reverse-date-received
 
+# LDAP
+set query_command = "mutt_ldap.py '%s'"
+
 macro index,pager A ":set confirmappend=no delete=yes\n<save-message>=RedHat/Archives.2015<enter><sync-mailbox>:set confirmappend=yes delete=ask-yes\n"  "Archive Message"
 
 source ~/.mutt/colors
