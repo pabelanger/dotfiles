@@ -1,0 +1,9 @@
+[connection]
+server = ldap.corp.redhat.com
+basedn = dc=redhat,dc=com
+
+[auth]
+gssapi = yes
+
+[cache]
+path = ~/.mutt/mutt-ldap.cache
