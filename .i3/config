@@ -168,3 +168,7 @@ for_window [class="Gsimplecal"] floating enable
 for_window [class="Gsimplecal"] move absolute position 1660px 850px
 
 for_window [class="Google-chrome"] border none
+
+# Screenshot
+bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
+bindsym --release Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
