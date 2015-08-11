@@ -161,6 +161,7 @@ bar {
 exec --no-startup-id nm-applet
 
 bindsym XF86Tools exec gnome-control-center
+bindsym XF86Calculator exec gnome-calculator
 bindsym $mod+q exec "i3lock -c 111111"
 
 bindsym $mod+c exec "gsimplecal"
