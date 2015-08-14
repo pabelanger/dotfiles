@@ -20,3 +20,5 @@ set query_command = "mutt_ldap.py '%s'"
 macro index,pager A ":set confirmappend=no delete=yes\n<save-message>=RedHat/Archives.2015<enter><sync-mailbox>:set confirmappend=yes delete=ask-yes\n"  "Archive Message"
 
 source ~/.mutt/colors
+source ~/.mutt/crypto
+source ~/.mutt/pgp
