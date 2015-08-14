@@ -12,7 +12,7 @@ set sendmail = "/usr/bin/msmtp -a redhat
 
 # Sorting
 set sort = threads
-set sort_aux = reverse-date-received
+set sort_aux = reverse-last-date-received
 
 # LDAP
 set query_command = "mutt_ldap.py '%s'"
