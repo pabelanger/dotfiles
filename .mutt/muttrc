@@ -2,7 +2,7 @@
 set folder = "~/Mail"
 source ~/.mutt/mailboxes
 set spoolfile = "+RedHat/INBOX"
-set record = "+RedHat/Sent\ Items"
+set record = "+RedHat/Sent"
 set postponed = "+RedHat/Drafts"
 
 # Info
