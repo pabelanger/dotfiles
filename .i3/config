@@ -165,6 +165,10 @@ bindsym XF86Tools exec gnome-control-center
 bindsym XF86Calculator exec gnome-calculator
 bindsym $mod+q exec "i3lock -c 111111"
 
+# Screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
 bindsym $mod+c exec "gsimplecal"
 for_window [class="Gsimplecal"] floating enable
 for_window [class="Gsimplecal"] move absolute position 1660px 850px
