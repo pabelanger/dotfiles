@@ -159,6 +159,7 @@ bar {
 
 # auto-started applications on login
 exec --no-startup-id nm-applet
+exec --no-startup-id rescuetime
 
 bindsym XF86Tools exec gnome-control-center
 bindsym XF86Calculator exec gnome-calculator
