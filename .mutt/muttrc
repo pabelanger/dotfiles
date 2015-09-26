@@ -22,3 +22,4 @@ macro index,pager A ":set confirmappend=no delete=yes\n<save-message>=RedHat/Arc
 source ~/.mutt/colors
 source ~/.mutt/crypto
 source ~/.mutt/pgp
+source ~/.mutt/notmuch-mutt

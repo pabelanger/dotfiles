@@ -5,6 +5,7 @@ maxsyncaccounts = 1
 [Account RedHat]
 localrepository = Local
 remoterepository = Remote
+postsynchook = notmuch new
 
 [Repository Local]
 type = Maildir

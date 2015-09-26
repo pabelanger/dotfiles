@@ -1,0 +1,16 @@
+[database]
+path=/home/pabelanger/Mail/RedHat
+
+[user]
+name=Paul Belanger
+primary_email=pabelanger@redhat.com
+
+[new]
+tags=unread;inbox;
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true
