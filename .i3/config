@@ -163,11 +163,10 @@ exec --no-startup-id rescuetime
 
 bindsym XF86Tools exec gnome-control-center
 bindsym XF86Calculator exec gnome-calculator
-bindsym $mod+q exec "i3lock -c 111111"
 
 # Screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 bindsym $mod+c exec "gsimplecal"
 for_window [class="Gsimplecal"] floating enable
@@ -180,9 +179,29 @@ bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
 bindsym --release Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # Audio
-bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%-
-bindsym XF86AudioMute exec amixer -q sset Master toggle
-bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+
+set $sink `pactl list short sinks | grep RUNNING | cut -f1`
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle
 
 # Document Viewer
 for_window [class="Evince"] floating enable
+
+# Screen lock
+set $Locker i3lock -c 111111 && sleep 1
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+q mode "$mode_system"
