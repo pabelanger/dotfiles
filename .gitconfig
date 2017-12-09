@@ -1,3 +1,7 @@
 [user]
 	name = Paul Belanger
 	email = pabelanger@redhat.com
+	signingkey = 2067AF38
+
+[commit]
+    gpgsign = true
